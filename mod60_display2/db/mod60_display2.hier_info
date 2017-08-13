@@ -1,0 +1,59 @@
+|mod60_display2
+clk => mod10:MOD_10.clock
+clk => mod6:MOD_6.clock
+ena => mod10:MOD_10.enable
+ao <= mod10:MOD_10.ao
+bo <= mod10:MOD_10.bo
+co <= mod10:MOD_10.co
+do <= mod10:MOD_10.do
+eo <= mod10:MOD_10.eo
+fo <= mod10:MOD_10.fo
+go <= mod10:MOD_10.go
+at <= mod6:MOD_6.at
+bt <= mod6:MOD_6.bt
+ct <= mod6:MOD_6.ct
+dt <= mod6:MOD_6.dt
+et <= mod6:MOD_6.et
+ft <= mod6:MOD_6.ft
+gt <= mod6:MOD_6.gt
+tc <= mod6:MOD_6.tc
+
+
+|mod60_display2|mod10:MOD_10
+clock => count[0].CLK
+clock => count[1].CLK
+clock => count[2].CLK
+clock => count[3].CLK
+enable => process_0.IN1
+enable => count[0].ENA
+enable => count[1].ENA
+enable => count[2].ENA
+enable => count[3].ENA
+ao <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+bo <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+co <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+do <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+eo <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+fo <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+go <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+tc <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mod60_display2|mod6:MOD_6
+clock => count[0].CLK
+clock => count[1].CLK
+clock => count[2].CLK
+enable => process_0.IN1
+enable => count[0].ENA
+enable => count[1].ENA
+enable => count[2].ENA
+at <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+bt <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+ct <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+dt <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+et <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+ft <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+gt <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+tc <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
